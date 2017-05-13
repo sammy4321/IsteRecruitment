@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>ISTE</title>
+
+    <!-- Bootstrap -->
+    {% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'iste_form/css/bootstrap.min.css' %}" type = "text/css"/>
+
+    
+  </head>
+  <body>
+   
+	<ul class="nav nav-tabs">
+  <li role="presentation" ><a href="/">Form</a></li>
+  <li role="presentation" class="active"><a href="/data">Data</a></li>
+</ul>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+	{% for info in all_registered %}
+		<h5>  {{ info.Name }} : {{info.Number}}</h5>
+	{% endfor %}
+
+    
+  </body>
+</html>
